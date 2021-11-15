@@ -1,0 +1,89 @@
+/*GENERAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+
+    font-family: 'Oxygen', sans-serif;
+
+    font-family: 'Red Hat Mono', monospace;
+
+    font-family: 'Road Rage', cursive;
+    font-size: 30px;
+
+}
+
+/*UTILITIES*/
+
+body{
+    text-align: center;
+}
+
+.container{
+    width: 600px;
+    margin: 20px auto;
+}
+
+.new-todo{
+    display: flex;
+}
+
+.new-todo input{
+    flex-grow: 1;
+    outline: none;
+}
+
+
+.logo img{
+    width: 350px;
+    margin: 30px 0;
+}
+
+.todo{
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+}
+
+
+.input-todo{
+    height: 50px;
+    border: 0;
+    border-bottom: lightgray;
+}
+
+.input-todo:hover{
+    border: transparent;
+    color: lightgray;
+    border-bottom: 2px solid #001533;
+}
+
+.btn{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #000b76;
+    border: 0;
+   
+    color: #fff;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.todo .text{
+    position: relative;
+    flex-grow: 1;
+}
+
+.todo .text::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000b76
+    ;
+    left: 0;
+}
+

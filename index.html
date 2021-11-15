@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&family=Oxygen:wght@700&family=Red+Hat+Mono:wght@600&family=Road+Rage&display=swap" rel="stylesheet"> 
+
+    <title>Todolist</title>
+</head>
+
+
+<body>
+    <div id="root" class="container">
+        <header class="logo" >
+            <img src="https://www.boolean.careers/images/misc/logo.png" alt="Todolist">
+        </header>
+
+        <section class="new-todo" >
+
+            <input type="text"
+            placeholder="Compila il todo"
+            v-model.trim="nuovoTodo"
+            @keyup.enter ="addTodo"
+            ref="todoInput"
+            class="input-todo"
+            >
+
+            <button class="btn" @click="addTodo">
+                Aggiungimi
+            </button>
+
+        </section>
+
+        <main>
+            <ul class="todo-list" >
+                <li class="todo" v-for="todo in todos" >
+                    <span
+                    class="text" >
+                    {{todo.text}}
+                    </span>
+
+                    <i class="fa-solid fa-skull-crossbones"></i>
+
+                </li>
+            </ul>
+        </main>
+
+
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000b76" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,90.7C384,85,480,43,576,26.7C672,11,768,21,864,64C960,107,1056,181,1152,197.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
