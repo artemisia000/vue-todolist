@@ -39,13 +39,17 @@
 
         <main>
             <ul class="todo-list" >
+
                 <li class="todo" v-for="todo in todos" >
                     <span
-                    class="text" >
+                    class="text performed"
+                    :class="{completed: todo.completed}" 
+                    @click="statusList(index)"
+                    >
                     {{todo.text}}
                     </span>
-
-                    <i class="fa-solid fa-skull-crossbones"></i>
+                    <i class="fa-solid fa-skull-crossbones"
+                    @click="remove(index)"></i>
 
                 </li>
             </ul>

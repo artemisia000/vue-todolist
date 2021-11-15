@@ -75,6 +75,7 @@ body{
 .todo .text{
     position: relative;
     flex-grow: 1;
+
 }
 
 .todo .text::before{
@@ -85,5 +86,12 @@ body{
     border: 3px solid #000b76
     ;
     left: 0;
+    cursor: pointer;
 }
 
+
+
+.fa-skull-crossbones:hover{
+    color: #00e165;
+    cursor: pointer;
+}

@@ -33,8 +33,13 @@ const app = new Vue ({
 
             this.nuovoTodo = '';
 
-        
-        }
+        },
+
+        remove(indexTodo){
+            this.todos.splice(indexTodo, 1);
+        },
+
+       
     }
 
 
